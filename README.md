@@ -1,4 +1,3 @@
-
 # 🧠 AI Avatar Training Simulator
 
 An AI-powered interactive prototype that translates natural language commands into avatar animations within a simulated training environment.
@@ -31,17 +30,23 @@ This simulates how AI-driven avatars can be used in training environments to gui
 ### 🤖 AI Command Interpretation
 - Extracts intent (action) and target (object or direction)  
 - Converts input into structured data for processing  
+- Uses AI API (e.g., Gemini) for robust command understanding  
+- Smart fallback to a local parser if AI service is unavailable  
 
 ### 🔄 Command → Behaviour Mapping
 - Maps interpreted commands to predefined avatar actions  
-- Supports both single actions and simple sequences  
+- Supports single actions and sequential multi-step commands  
 
 ### 🧍 Avatar Animation Simulation
 - Displays a 3D avatar performing actions  
 - Demonstrates realistic training behaviours  
 
 ### 💬 Explanation Panel
-- Provides real-time feedback explaining what the avatar is doing  
+- Shows numbered step-by-step breakdowns for each command:
+  - Animation name  
+  - Target object  
+  - Duration  
+  - Description of the action  
 
 ### 🎮 Camera & Scene Controls
 - Rotate, zoom, and reset the view  
@@ -51,13 +56,32 @@ This simulates how AI-driven avatars can be used in training environments to gui
 
 ## ⚙️ How It Works
 
-1. The user enters a natural language command  
-2. The system interprets the input using AI logic  
-3. The command is converted into a structured format  
-4. The system maps the command to an animation or sequence  
-5. The avatar performs the action  
-6. A short explanation is displayed to the user  
+1. User enters a natural language command.  
+2. AI interprets the input and extracts the action and target.  
+3. Command is converted into a structured format.  
+4. The system maps the command to an animation or sequence.  
+5. The avatar performs the action.  
+6. A short explanation is displayed for each step.  
 
 ---
 
 ## 🏗️ System Architecture
+
+```text
+User Input (Text Command)
+       ↓
+AI Interpretation Layer (Extracts action + target)
+       ↓
+Command Mapping Engine (Generates animation sequence)
+       ↓
+Animation Controller (Executes animations in order)
+       ↓
+Avatar & Scene Renderer (Displays avatar)
+       ↓
+Step-by-Step Explanation Layer (Shows animation name, target, duration, description)
+---
+
+## ⚙️ Setup Instructions
+Clone the repository:
+git clone https://github.com/Nokulungs/AI-Avatar-Training-Simulator.git
+cd AI-Avatar-Training-Simulator
