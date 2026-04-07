@@ -1,6 +1,4 @@
-# Welcome to your Lovable project
 
-TODO: Document your project here
 # 🧠 AI Avatar Training Simulator
 
 An AI-powered interactive prototype that translates natural language commands into avatar animations within a simulated training environment.
