@@ -79,9 +79,27 @@ Animation Controller (Executes animations in order)
 Avatar & Scene Renderer (Displays avatar)
        ↓
 Step-by-Step Explanation Layer (Shows animation name, target, duration, description)
+````
+⚙️ Setup Instructions
+Clone the repository:
+git clone https://github.com/Nokulungs/AI-Avatar-Training-Simulator.git
+cd AI-Avatar-Training-Simulator
+Open the project in a browser or a development environment that supports HTML/JS/3D rendering.
+Ensure internet access for AI API calls (Gemini or equivalent).
+Open index.html (or main entry file) to start the simulator.
+Type commands in the input field and observe the avatar executing them.
 
+##🛠️ APIs & Tools Used
+AI Command API: Gemini (for natural language → structured action mapping)
+Avatar Animations: Predefined 3D animations for walking, pointing, waving, bowing, and dancing
+3D Rendering: Web-based 3D engine (e.g., Babylon.js / Three.js)
+Command Fallback: Local keyword parser for offline or unavailable AI service
+⚠️ Limitations
+Limited command vocabulary; highly ambiguous commands may fail.
+Text-only input; voice commands are not supported.
+Only single-avatar interactions; no multi-avatar scenarios yet.
+Simplified animations; advanced motion blending is not implemented.
+AI API availability may affect response speed and reliability.
 
-
-
-
+---
 
